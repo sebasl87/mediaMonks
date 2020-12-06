@@ -440,8 +440,8 @@ body {
   position: fixed;
   bottom: 10px;
   right: 40px;
-  height: 128px;
-  width: 128px;
+  height: 80px;
+  width: 80px;
   filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(106deg) brightness(108%) contrast(101%)
 }
 
@@ -567,14 +567,4 @@ body {
     right: 20px;
     width: 70px;
   }
-}
-
-.svg-logo-mm{
-  fill: #fff;
-}
-img .logo > svg .svg-logo-mm{
-  fill: #fff;
-}
-.logo > svg{
-  fill: #fff;
 }

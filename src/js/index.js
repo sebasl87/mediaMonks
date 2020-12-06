@@ -20,33 +20,34 @@ function fadeIn(selector) {
 
 function moveToSlide(slideNumber) {
   const slider = document.querySelector('.slider');
-  const sections = document.querySelectorAll('.slider-section'); // grab all the titles
-  const numbers = document.querySelectorAll('.numbered-nav li'); // grab all the numbers
+  const sections = document.querySelectorAll('.slider-section'); 
+  const numbers = document.querySelectorAll('.numbered-nav li'); 
   const selector = '.slider-section > *';
 
-  if (slideNumber < 0 || slideNumber > sections.length) { // if the slide is minor than zero, or greater than the total amount of slides
-    return; // early return, do nothing
+  /** Slider < 0 = nada */
+  if (slideNumber < 0 || slideNumber > sections.length) { 
+    return;
   }
 
   slider.setAttribute('data-selected', slideNumber);
 
   numbers.forEach((elem, index) => {
-    if (index === slideNumber) { // if it's the same index as the slide number
-      elem.classList.add('active'); // add active class
+    if (index === slideNumber) { 
+      elem.classList.add('active');
     } else {
-      elem.classList.remove('active'); // else remove it
+      elem.classList.remove('active');
     }
   });
 
-  fadeOut(selector) // hide the text inmediately
+  fadeOut(selector)
 
   setTimeout(() => {
     slider.style.right = Math.min(slideNumber, sections.length - 0.3) * 100 + 'vw';
-  }, 500) // slide to desired slideNumber after 500ms (we've hidden the titles)
+  }, 500) 
 
   setTimeout(() => {
     fadeIn(selector);
-  }, 1000); // fadeIn the titles after 1000ms (500ms from hiding the titles and 500ms sliding)
+  }, 1000); 
 }
 
 window.onload = setTimeout(() => {

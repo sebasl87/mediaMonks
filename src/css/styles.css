@@ -397,8 +397,8 @@ body {
   background-image: url('../../assets/images/background.jpg');
   background-repeat: no-repeat;
   background-color: black;
-  background-position: center;
-  background-size: cover;
+  background-position: left;
+  background-size: 910vw 100%;
   display: flex;
   right: 0;
   transition: all 1s ease;
@@ -408,7 +408,9 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  padding: 80px 100px;
+  padding: 32px;
+  padding-bottom: 80px;
+  background-position-y: 100%;
 }
 
 .slider-section > * {
@@ -462,6 +464,7 @@ body {
   right: 0;
   cursor: pointer;
   transition: var(--transition-main);
+  width: 60px;
 }
 
 .arrow-right:hover,
@@ -477,6 +480,7 @@ body {
 .footer {
   background: black;
   width: 70vw;
+  position: relative
 }
 
 .nav-footer {
